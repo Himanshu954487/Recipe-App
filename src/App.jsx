@@ -1,11 +1,32 @@
-
+import { useState } from 'react'
 import './App.css'
+import Search from './components/Search'
+import FoodList from './components/FoodList';
+import Header from './components/Header';
+import Container from './components/Container';
+import InnerContainer from './components/InnerContainer';
+import FoodRecipe from './components/FoodRecipe';
 
 function App() {
+  const [foodData, setfoodData] = useState([]);
+  const [foodId, setfoodId] = useState("");
   return (
     <>
-      <div className='text-4xl text-amber-600'>This is my recipe app</div>
+      <Header />
+      <Search foodData={foodData} setfoodData={setfoodData} />
+      <Container>
+        <InnerContainer>
+          <FoodList setfoodId={setfoodId} foodData={foodData} />
+        </InnerContainer>
+
+        <InnerContainer>
+          <FoodRecipe foodId={foodId}></FoodRecipe>
+        </InnerContainer>
+
+      </Container>
+
     </>
+
   )
 }
 
