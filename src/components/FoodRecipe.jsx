@@ -62,7 +62,7 @@ function FoodRecipe({ foodId }) {
                                         key={index}
                                         className="flex gap-4 text-gray-600 leading-relaxed"
                                     >
-                                        <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full font-semibold">
+                                        <span className="shrink-0 w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full font-semibold">
                                             {index + 1}
                                         </span>
 

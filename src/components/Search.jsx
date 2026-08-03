@@ -5,7 +5,7 @@ const URL = "https://dummyjson.com/recipes/search"
 
 
 function Search({ foodData, setfoodData }) {
-    const [query, setQuery] = useState("Margherita")
+    const [query, setQuery] = useState("")
 
 
     useEffect(() => {
